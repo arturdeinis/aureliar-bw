@@ -1,0 +1,36 @@
+/* Black and white variant – loaded after styles.css on bw.html / bw-apply.html.
+   Swaps every tinted token for a pure neutral and desaturates all media. */
+:root {
+  --ink:   #0B0B0B;
+  --ink-2: #121212;
+  --ink-3: #1A1A1A;
+
+  --cream:   #F4F4F4;
+  --cream-2: #E8E8E8;
+  --cream-3: #D6D6D6;
+
+  /* the champagne accent becomes plain white on ink, black on paper */
+  --gold:      #FFFFFF;
+  --gold-soft: #E6E6E6;
+  --gold-ink:  #111111;
+
+  --on-ink:       #F4F4F4;
+  --on-ink-dim:   rgba(244, 244, 244, 0.74);
+  --on-ink-faint: rgba(244, 244, 244, 0.56);
+  --hair-ink:     rgba(244, 244, 244, 0.14);
+  --hair-ink-2:   rgba(244, 244, 244, 0.28);
+
+  --on-cream:       #111111;
+  --on-cream-dim:   rgba(17, 17, 17, 0.78);
+  --on-cream-faint: rgba(17, 17, 17, 0.64);
+  --hair-cream:     rgba(17, 17, 17, 0.14);
+  --hair-cream-2:   rgba(17, 17, 17, 0.30);
+}
+
+img, video, picture, svg image,
+[style*="background-image"] { filter: grayscale(1); }
+
+.field .error, .field.has-error, .form__status[data-state="error"] { color: #000; }
+.field.has-error input, .field.has-error select, .field.has-error textarea { border-bottom-color: #000; }
+
+.footer__word span { background: linear-gradient(180deg, #E6E6E6 0%, rgba(230, 230, 230, 0.2) 92%); -webkit-background-clip: text; background-clip: text; }
