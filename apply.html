@@ -7,11 +7,13 @@
 <meta name="description" content="Apply for membership of 371AURELIAR, a private members' society in Riga. By application only, personally reviewed.">
 <meta name="theme-color" content="#0B0B0B">
 <meta name="robots" content="noindex">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-VwOCMsYdhlqcGvDZkQx1plnoZ9ITs4QwISeLjMDEJyg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://script.google.com https://script.googleusercontent.com; object-src 'none'; base-uri 'none'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=3">
+<link rel="stylesheet" href="assets/css/styles.css?v=4">
 <link rel="stylesheet" href="assets/css/bw.css?v=1">
 <script>document.documentElement.className='js is-seen'</script>
 </head>
@@ -75,6 +77,12 @@
     <div class="progress-steps" aria-hidden="true"><span></span><span></span></div>
 
     <form class="form" id="apply-form" novalidate>
+
+      <!-- left empty by people; bots that fill every field are discarded -->
+      <div class="hp" aria-hidden="true">
+        <label for="website">Website</label>
+        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
 
       <fieldset class="fieldset">
         <div class="fieldset__head"><span>I</span><h2>You</h2></div>
@@ -167,6 +175,6 @@
   </div>
 </main>
 
-<script src="assets/js/main.js?v=3" defer></script>
+<script src="assets/js/main.js?v=4" defer></script>
 </body>
 </html>

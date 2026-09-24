@@ -455,13 +455,15 @@
   var submitBtn = doc.getElementById('submit-btn');
 
   /* --------------------------------------------------------------------
-     CRM HOOK
-     Set ENDPOINT to the CRM / form endpoint (HubSpot, Attio, Pipedrive,
-     Zapier, Make, a serverless function). While it is null the form
-     validates, shows the confirmation state and logs the payload, so the
-     journey can be demoed end to end before the CRM is wired.
+     APPLICATIONS ENDPOINT
+     Google Apps Script web app bound to the private applications sheet
+     (source kept outside this public repo). The endpoint is write-only: it
+     validates and appends a row, and never returns sheet data. While it is
+     null the form validates, shows the confirmation state and logs the
+     payload, so the journey can be demoed end to end.
   -------------------------------------------------------------------- */
-  var ENDPOINT = null;
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbx-sjrBxz770arO83bR4yQz1lSpZFsxovFHZt5Ks_1lBpIM5_iKh2QAs9nGNeWtC0oNgA/exec';
+  var openedAt = Date.now();
 
   function fieldOf(input) { return input.closest('.field') || input.closest('.consent'); }
 
@@ -545,8 +547,7 @@
     new FormData(form).forEach(function (value, key) {
       payload[key] = key === 'consent' ? true : value;
     });
-    payload.source = 'aureliar.com/apply';
-    payload.submittedAt = new Date().toISOString();
+    payload.elapsed = Date.now() - openedAt;
 
     submitBtn.disabled = true;
     submitBtn.classList.add('is-busy');
@@ -564,13 +565,21 @@
       return;
     }
 
+    // text/plain keeps this a "simple" request: Apps Script cannot answer
+    // a CORS preflight, and the body is still JSON.
     fetch(ENDPOINT, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload),
+      credentials: 'omit',
+      referrerPolicy: 'no-referrer'
     })
       .then(function (res) {
         if (!res.ok) throw new Error('Request failed: ' + res.status);
+        return res.json();
+      })
+      .then(function (result) {
+        if (!result || !result.ok) throw new Error('Rejected: ' + (result && result.error));
         done();
       })
       .catch(function (err) {
