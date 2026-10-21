@@ -17,8 +17,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/img/hero-poster.jpg?v=2">
-<link rel="stylesheet" href="assets/css/styles.css?v=5">
+<link rel="preload" as="image" href="assets/img/hero-poster.jpg?v=3">
+<link rel="stylesheet" href="assets/css/styles.css?v=6">
 <link rel="stylesheet" href="assets/css/bw.css?v=1">
 <script>document.documentElement.className='js';try{if(sessionStorage.getItem('aur-seen'))document.documentElement.classList.add('is-seen')}catch(e){}</script>
 </head>
@@ -73,9 +73,8 @@
     <ol class="menu__list">
       <li><a href="#society" data-img="assets/img/club-table.jpg"><span class="menu__no">01</span>Society</a></li>
       <li><a href="#chapters" data-img="assets/img/club-beach.jpg"><span class="menu__no">02</span>Chapters</a></li>
-      <li><a href="#the-return" data-img="assets/img/moment-1.jpg"><span class="menu__no">03</span>The Return</a></li>
-      <li><a href="#membership" data-img="assets/img/apply-terrace.jpg"><span class="menu__no">04</span>Membership</a></li>
-      <li><a href="#faq" data-img="assets/img/club-season.jpg"><span class="menu__no">05</span>Questions</a></li>
+      <li><a href="#membership" data-img="assets/img/apply-terrace.jpg"><span class="menu__no">03</span>Membership</a></li>
+      <li><a href="#faq" data-img="assets/img/club-season.jpg"><span class="menu__no">04</span>Questions</a></li>
     </ol>
     <div class="menu__foot">
       <a class="btn" href="apply.html">
@@ -96,10 +95,10 @@
   <!-- ============================================================ hero -->
   <section class="hero" aria-label="Introduction">
     <div class="hero__media" data-parallax="0.18">
-      <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg?v=2" data-video>
-        <source src="assets/video/hero-720.mp4?v=2" type="video/mp4" media="(max-width: 900px)">
-        <source src="assets/video/hero.webm?v=2" type="video/webm">
-        <source src="assets/video/hero.mp4?v=2" type="video/mp4">
+      <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg?v=3" data-video>
+        <source src="assets/video/hero-720.mp4?v=3" type="video/mp4" media="(max-width: 900px)">
+        <source src="assets/video/hero.webm?v=3" type="video/webm">
+        <source src="assets/video/hero.mp4?v=3" type="video/mp4">
       </video>
     </div>
     <div class="hero__scrim" aria-hidden="true"></div>
@@ -201,31 +200,35 @@
             <span class="pillar__no">Chapter I</span>
             <h3 class="pillar__title">Opening Night</h3>
             <p>The first table.</p>
+            <button class="textlink pillar__open" type="button" data-gallery="opening" aria-haspopup="dialog">View the gallery<span class="pillar__count">01</span></button>
           </li>
           <li class="pillar" data-pillar="1">
             <figure class="pillar__img"><img src="assets/img/club-padel.jpg" alt="Members at the courtside tables while others play padel" loading="lazy"></figure>
             <span class="pillar__no">Chapter II</span>
             <h3 class="pillar__title">Padel Affair</h3>
             <p>An afternoon in motion.</p>
+            <button class="textlink pillar__open" type="button" data-gallery="padel" aria-haspopup="dialog">View the gallery<span class="pillar__count">01</span></button>
           </li>
           <li class="pillar" data-pillar="2">
             <figure class="pillar__img"><img src="assets/img/club-beach-2.jpg" alt="Members gathered on the beach deck, the Baltic Sea behind them" loading="lazy"></figure>
             <span class="pillar__no">Chapter III</span>
             <h3 class="pillar__title">Beach Club</h3>
             <p>A day by the Baltic.</p>
+            <button class="textlink pillar__open" type="button" data-gallery="beach" aria-haspopup="dialog">View the gallery<span class="pillar__count">02</span></button>
           </li>
           <li class="pillar" data-pillar="3">
             <figure class="pillar__img"><img src="assets/img/club-table.jpg" alt="Guests along the long table at ShiYuzu" loading="lazy"></figure>
             <span class="pillar__no">Chapter IV</span>
             <h3 class="pillar__title">The Return</h3>
             <p>Dinner at ShiYuzu.</p>
-            <a class="textlink" href="#the-return">See the evening</a>
+            <button class="textlink pillar__open" type="button" data-gallery="return" aria-haspopup="dialog">View the gallery<span class="pillar__count">13</span></button>
           </li>
           <li class="pillar" data-pillar="4">
             <figure class="pillar__img"><img src="assets/img/club-top100.jpg" alt="Guests in conversation by a tall window at Top 100" loading="lazy"></figure>
             <span class="pillar__no">Chapter V</span>
             <h3 class="pillar__title">Top 100</h3>
             <p>The room, assembled.</p>
+            <button class="textlink pillar__open" type="button" data-gallery="top100" aria-haspopup="dialog">View the gallery<span class="pillar__count">10</span></button>
           </li>
         </ol>
       </div>
@@ -246,50 +249,6 @@
         <span class="line"><span>No <em>performance</em>.</span></span>
       </blockquote>
       <p class="film__cap meta">Chapter IV &nbsp;/&nbsp; The Return, ShiYuzu, Rīga</p>
-    </div>
-  </section>
-
-  <!-- ===================================================== 03 the return -->
-  <section class="moments" id="the-return" aria-label="Chapter IV, The Return">
-    <div class="moments__pin">
-      <div class="moments__head wrap">
-        <div class="label reveal"><span>03</span>Chapter IV, The Return</div>
-        <h2 class="display display--m reveal">Dinner at <em>ShiYuzu</em></h2>
-        <p class="moments__hint meta" aria-hidden="true">Scroll <svg width="18" height="9"><use href="#arrow"></use></svg></p>
-      </div>
-
-      <div class="moments__track" data-htrack tabindex="0" role="group" aria-label="Photographs from The Return">
-        <figure class="shot shot--tall">
-          <div class="shot__img"><img src="assets/img/moment-6.jpg" alt="The venue's glass front, lit at night" loading="lazy"></div>
-          <figcaption><span>Nº 01</span>Arrival</figcaption>
-        </figure>
-        <figure class="shot shot--wide shot--low">
-          <div class="shot__img"><img src="assets/img/moment-2.jpg" alt="The glowing onyx bar" loading="lazy"></div>
-          <figcaption><span>Nº 02</span>The onyx bar</figcaption>
-        </figure>
-        <figure class="shot shot--small">
-          <div class="shot__img"><img src="assets/img/moment-4.jpg" alt="A chef rolling sushi by hand" loading="lazy"></div>
-          <figcaption><span>Nº 03</span>By hand</figcaption>
-        </figure>
-        <figure class="shot shot--tall shot--high">
-          <div class="shot__img"><img src="assets/img/moment-1.jpg" alt="Tataki and tartare served on marble, a ShiYuzu menu beside it" loading="lazy"></div>
-          <figcaption><span>Nº 04</span>The table is set</figcaption>
-        </figure>
-        <figure class="shot shot--wide">
-          <div class="shot__img"><img src="assets/img/moment-5.jpg" alt="A guest raising a glass" loading="lazy"></div>
-          <figcaption><span>Nº 05</span>The first toast</figcaption>
-        </figure>
-        <figure class="shot shot--tall shot--low">
-          <div class="shot__img"><img src="assets/img/moment-3.jpg" alt="Two guests deep in conversation across the table" loading="lazy"></div>
-          <figcaption><span>Nº 06</span>Across the table</figcaption>
-        </figure>
-        <div class="shot shot--end">
-          <p class="display display--s">Then came<br><em>Top 100.</em></p>
-          <a class="textlink" href="#chapters">Chapter V</a>
-        </div>
-      </div>
-
-      <div class="moments__progress" aria-hidden="true"><span data-hprogress></span></div>
     </div>
   </section>
 
@@ -319,7 +278,7 @@
     </div>
   </section>
 
-  <!-- ====================================================== 04 membership -->
+  <!-- ====================================================== 03 membership -->
   <section class="membership" id="membership" aria-label="Membership">
     <div class="membership__bg" aria-hidden="true" data-parallax="0.12">
       <img src="assets/img/wide.jpg" alt="" loading="lazy">
@@ -328,7 +287,7 @@
 
     <div class="wrap membership__inner">
       <header class="sec-head">
-        <div class="label reveal"><span>04</span>Membership</div>
+        <div class="label reveal"><span>03</span>Membership</div>
         <h2 class="display display--xl split-lines">
           <span class="line"><span>You do not apply</span></span>
           <span class="line"><span>for an event.</span></span>
@@ -364,11 +323,11 @@
     </div>
   </section>
 
-  <!-- ============================================================ 05 faq -->
+  <!-- ============================================================ 04 faq -->
   <section class="faq" id="faq" aria-label="Questions">
     <div class="wrap faq__grid">
       <header class="faq__head">
-        <div class="label reveal"><span>05</span>Questions</div>
+        <div class="label reveal"><span>04</span>Questions</div>
         <h2 class="display display--l split-lines">
           <span class="line"><span>Asked,</span></span>
           <span class="line"><span><em>answered</em>.</span></span>
@@ -468,7 +427,63 @@
   </div>
 </footer>
 
+<!-- ============================================== chapter galleries -->
+<div class="gallery" id="gallery" role="dialog" aria-modal="true" aria-labelledby="gallery-title" aria-hidden="true" inert>
+  <div class="gallery__body" data-lenis-prevent>
+    <header class="gallery__head wrap">
+      <div>
+        <span class="gallery__no" data-gallery-no></span>
+        <h2 class="gallery__title" id="gallery-title" data-gallery-title></h2>
+        <p class="gallery__sub" data-gallery-sub></p>
+      </div>
+      <div class="gallery__side">
+        <span class="gallery__count meta" data-gallery-count></span>
+        <button class="btn btn--sm btn--glass gallery__close" type="button" data-gallery-close><span>Close</span></button>
+      </div>
+    </header>
+    <div class="gallery__grid wrap" data-gallery-grid></div>
+  </div>
+</div>
+
+<template data-set="opening" data-no="Chapter I" data-title="Opening Night" data-sub="The first table.">
+  <img src="assets/img/club-opening.jpg" alt="Two members dancing, hands raised, on Opening Night">
+</template>
+<template data-set="padel" data-no="Chapter II" data-title="Padel Affair" data-sub="An afternoon in motion.">
+  <img src="assets/img/club-padel.jpg" alt="Members at the courtside tables while others play padel">
+</template>
+<template data-set="beach" data-no="Chapter III" data-title="Beach Club" data-sub="A day by the Baltic.">
+  <img src="assets/img/club-beach-2.jpg" alt="Members gathered on the beach deck, the Baltic Sea behind them">
+  <img src="assets/img/club-beach.jpg" alt="Members relaxing on the beach deck in the sun">
+</template>
+<template data-set="return" data-no="Chapter IV" data-title="The Return" data-sub="Dinner at ShiYuzu.">
+  <img src="assets/img/club-table.jpg" alt="Guests along the long table at ShiYuzu">
+  <img src="assets/img/moment-3.jpg" alt="Two guests deep in conversation across the table">
+  <img src="assets/img/club-circle.jpg" alt="Members talking under the flower arch on the terrace">
+  <img src="assets/img/ambassador.jpg" alt="A guest mid-conversation at the table">
+  <img src="assets/img/club-court.jpg" alt="Members laughing together over dinner">
+  <img src="assets/img/apply-group.jpg" alt="Members talking on the terrace at night">
+  <img src="assets/img/founders-table.jpg" alt="The long candlelit table, members seated along both sides">
+  <img src="assets/img/club-season.jpg" alt="A member laughing beside the flower arch">
+  <img src="assets/img/apply.jpg" alt="Two guests in conversation at the table">
+  <img src="assets/img/wide.jpg" alt="Guests at the long table, the room in warm light">
+  <img src="assets/img/moment-6.jpg" alt="The venue's glass front, lit at night">
+  <img src="assets/img/moment-4.jpg" alt="A chef rolling sushi by hand">
+  <img src="assets/img/moment-1.jpg" alt="Tataki and tartare served on marble">
+</template>
+<template data-set="top100" data-no="Chapter V" data-title="Top 100" data-sub="The room, assembled.">
+  <img src="assets/img/gallery/top100-01.jpg" alt="Two members in black tie seated by a tall window" width="1600" height="900">
+  <img src="assets/img/gallery/top100-02.jpg" alt="A guest in a red dress looking across the room" width="1600" height="900">
+  <img src="assets/img/gallery/top100-03.jpg" alt="The bartender at work behind the bar" width="1600" height="900">
+  <img src="assets/img/gallery/top100-04.jpg" alt="A member in profile at the bar" width="1600" height="900">
+  <img src="assets/img/gallery/top100-06.jpg" alt="A member taking a drink by the window" width="1600" height="900">
+  <img src="assets/img/gallery/top100-07.jpg" alt="Guests in conversation by a tall window" width="1600" height="900">
+  <img src="assets/img/gallery/top100-08.jpg" alt="Members gathered in the room" width="1600" height="900">
+  <img src="assets/img/gallery/top100-10.jpg" alt="A member addressing the room, guests gathered around" width="1600" height="900">
+  <img src="assets/img/gallery/top100-05.jpg" alt="The spread laid out on marble" width="1600" height="900">
+  <img src="assets/img/gallery/top100-09.jpg" alt="A cocktail set down on the bar" width="1600" height="900">
+</template>
+
 <script src="assets/js/vendor/lenis.min.js" defer></script>
-<script src="assets/js/main.js?v=4" defer></script>
+<script src="assets/js/main.js?v=5" defer></script>
 </body>
 </html>
