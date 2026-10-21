@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/img/hero-poster.jpg">
+<link rel="preload" as="image" href="assets/img/hero-poster.jpg?v=2">
 <link rel="stylesheet" href="assets/css/styles.css?v=4">
 <link rel="stylesheet" href="assets/css/bw.css?v=1">
 <script>document.documentElement.className='js';try{if(sessionStorage.getItem('aur-seen'))document.documentElement.classList.add('is-seen')}catch(e){}</script>
@@ -74,9 +74,8 @@
       <li><a href="#society" data-img="assets/img/club-table.jpg"><span class="menu__no">01</span>Society</a></li>
       <li><a href="#chapters" data-img="assets/img/club-beach.jpg"><span class="menu__no">02</span>Chapters</a></li>
       <li><a href="#the-return" data-img="assets/img/moment-1.jpg"><span class="menu__no">03</span>The Return</a></li>
-      <li><a href="#next" data-img="assets/img/reel-poster.jpg"><span class="menu__no">04</span>Chapter V</a></li>
-      <li><a href="#membership" data-img="assets/img/apply-terrace.jpg"><span class="menu__no">05</span>Membership</a></li>
-      <li><a href="#faq" data-img="assets/img/club-season.jpg"><span class="menu__no">06</span>Questions</a></li>
+      <li><a href="#membership" data-img="assets/img/apply-terrace.jpg"><span class="menu__no">04</span>Membership</a></li>
+      <li><a href="#faq" data-img="assets/img/club-season.jpg"><span class="menu__no">05</span>Questions</a></li>
     </ol>
     <div class="menu__foot">
       <a class="btn" href="apply.html">
@@ -97,10 +96,10 @@
   <!-- ============================================================ hero -->
   <section class="hero" aria-label="Introduction">
     <div class="hero__media" data-parallax="0.18">
-      <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg" data-video>
-        <source src="assets/video/hero-720.mp4" type="video/mp4" media="(max-width: 900px)">
-        <source src="assets/video/hero.webm" type="video/webm">
-        <source src="assets/video/hero.mp4" type="video/mp4">
+      <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg?v=2" data-video>
+        <source src="assets/video/hero-720.mp4?v=2" type="video/mp4" media="(max-width: 900px)">
+        <source src="assets/video/hero.webm?v=2" type="video/webm">
+        <source src="assets/video/hero.mp4?v=2" type="video/mp4">
       </video>
     </div>
     <div class="hero__scrim" aria-hidden="true"></div>
@@ -129,8 +128,8 @@
         </div>
 
         <div class="hero__now" data-intro style="--i:6">
-          <span class="hero__now-label">Next chapter</span>
-          <a class="hero__now-title" href="#next">Chapter V &nbsp;·&nbsp; Top 100 <svg width="18" height="9" aria-hidden="true"><use href="#arrow"></use></svg></a>
+          <span class="hero__now-label">Latest chapter</span>
+          <a class="hero__now-title" href="#chapters">Chapter V &nbsp;·&nbsp; Top 100 <svg width="18" height="9" aria-hidden="true"><use href="#arrow"></use></svg></a>
           <span class="hero__now-sub">10 October, members only</span>
           <button class="vid-toggle" type="button" data-video-toggle aria-label="Pause film">
             <span class="vid-toggle__icon" aria-hidden="true"></span>
@@ -180,7 +179,7 @@
         <div>
           <div class="label reveal"><span>02</span>The archive</div>
           <h2 class="display display--l split-lines">
-            <span class="line"><span>Four chapters.</span></span>
+            <span class="line"><span>Five chapters.</span></span>
             <span class="line"><span>One <em>circle</em>.</span></span>
           </h2>
         </div>
@@ -194,8 +193,9 @@
             <img src="assets/img/club-padel.jpg" alt="" loading="lazy" data-stage="1">
             <img src="assets/img/club-beach-2.jpg" alt="" loading="lazy" data-stage="2">
             <img src="assets/img/club-table.jpg" alt="" loading="lazy" data-stage="3">
+            <img src="assets/img/club-top100.jpg" alt="" loading="lazy" data-stage="4">
           </div>
-          <div class="club__count"><span data-stage-no>01</span> / 04</div>
+          <div class="club__count"><span data-stage-no>01</span> / 05</div>
         </div>
 
         <ol class="club__list">
@@ -223,6 +223,12 @@
             <h3 class="pillar__title">The Return</h3>
             <p>Dinner at ShiYuzu.</p>
             <a class="textlink" href="#the-return">See the evening</a>
+          </li>
+          <li class="pillar" data-pillar="4">
+            <figure class="pillar__img"><img src="assets/img/club-top100.jpg" alt="Guests in conversation by a tall window at Top 100" loading="lazy"></figure>
+            <span class="pillar__no">Chapter V</span>
+            <h3 class="pillar__title">Top 100</h3>
+            <p>The room, assembled.</p>
           </li>
         </ol>
       </div>
@@ -281,43 +287,12 @@
           <figcaption><span>Nº 06</span>Across the table</figcaption>
         </figure>
         <div class="shot shot--end">
-          <p class="display display--s">The next room is<br>being <em>assembled.</em></p>
-          <a class="textlink" href="#next">Chapter V</a>
+          <p class="display display--s">Then came<br><em>Top 100.</em></p>
+          <a class="textlink" href="#chapters">Chapter V</a>
         </div>
       </div>
 
       <div class="moments__progress" aria-hidden="true"><span data-hprogress></span></div>
-    </div>
-  </section>
-
-  <!-- ====================================================== 04 chapter v -->
-  <section class="next" id="next" aria-label="Chapter V">
-    <div class="wrap next__grid">
-      <div class="next__main">
-        <div class="label reveal"><span>04</span>Chapter V &nbsp;·&nbsp; A first look</div>
-        <h2 class="next__title split-lines">
-          <span class="line"><span>Top</span></span>
-          <span class="line"><span><em>100</em></span></span>
-        </h2>
-      </div>
-
-      <div class="next__side">
-        <p class="next__date reveal">10 October &nbsp;·&nbsp; Members only</p>
-        <h3 class="display display--s reveal">The next room is being assembled.</h3>
-        <p class="lede reveal">A private members club for the ambitious and exceptional. Where the next generation of leaders grow, build, and win together.</p>
-
-        <div class="countdown reveal" data-countdown="2026-10-10T19:00:00+03:00" aria-label="Time until Chapter V">
-          <div><span data-cd="d">00</span><small>Days</small></div>
-          <div><span data-cd="h">00</span><small>Hours</small></div>
-          <div><span data-cd="m">00</span><small>Minutes</small></div>
-          <div><span data-cd="s">00</span><small>Seconds</small></div>
-        </div>
-
-        <a class="btn btn--dark reveal" href="apply.html">
-          <span>Apply to belong</span>
-          <svg width="18" height="9" aria-hidden="true"><use href="#arrow"></use></svg>
-        </a>
-      </div>
     </div>
   </section>
 
@@ -347,7 +322,7 @@
     </div>
   </section>
 
-  <!-- ====================================================== 05 membership -->
+  <!-- ====================================================== 04 membership -->
   <section class="membership" id="membership" aria-label="Membership">
     <div class="membership__bg" aria-hidden="true" data-parallax="0.12">
       <img src="assets/img/wide.jpg" alt="" loading="lazy">
@@ -356,7 +331,7 @@
 
     <div class="wrap membership__inner">
       <header class="sec-head">
-        <div class="label reveal"><span>05</span>Membership</div>
+        <div class="label reveal"><span>04</span>Membership</div>
         <h2 class="display display--xl split-lines">
           <span class="line"><span>You do not apply</span></span>
           <span class="line"><span>for an event.</span></span>
@@ -392,11 +367,11 @@
     </div>
   </section>
 
-  <!-- ============================================================ 06 faq -->
+  <!-- ============================================================ 05 faq -->
   <section class="faq" id="faq" aria-label="Questions">
     <div class="wrap faq__grid">
       <header class="faq__head">
-        <div class="label reveal"><span>06</span>Questions</div>
+        <div class="label reveal"><span>05</span>Questions</div>
         <h2 class="display display--l split-lines">
           <span class="line"><span>Asked,</span></span>
           <span class="line"><span><em>answered</em>.</span></span>
@@ -471,7 +446,6 @@
         <ul>
           <li><a href="#society">Society</a></li>
           <li><a href="#chapters">Chapters</a></li>
-          <li><a href="#next">Chapter V</a></li>
           <li><a href="#membership">Membership</a></li>
           <li><a href="#faq">Questions</a></li>
         </ul>
