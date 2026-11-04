@@ -495,7 +495,8 @@
      shows on the form and lands in the sheet's Event column; unknown slugs
      are ignored, so the column only ever holds these values. */
   var EVENTS = {
-    gongu: 'Chapter VI · Gongu, November 7th'
+    'chapter-vi': 'Chapter VI · Business Dinner, November 7th',
+    gongu: 'Chapter VI · Business Dinner, November 7th' /* old link, kept so it still tags */
   };
   try {
     var eventSlug = new URLSearchParams(window.location.search).get('event');
