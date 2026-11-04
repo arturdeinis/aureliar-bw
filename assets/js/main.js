@@ -491,6 +491,22 @@
      null the form validates, shows the confirmation state and logs the
      payload, so the journey can be demoed end to end.
   -------------------------------------------------------------------- */
+  /* events that can be linked as apply.html?event=<slug>. The label is what
+     shows on the form and lands in the sheet's Event column; unknown slugs
+     are ignored, so the column only ever holds these values. */
+  var EVENTS = {
+    gongu: 'Chapter VI · Gongu, November 7th'
+  };
+  try {
+    var eventSlug = new URLSearchParams(window.location.search).get('event');
+    if (eventSlug && Object.prototype.hasOwnProperty.call(EVENTS, eventSlug)) {
+      var eventInput = doc.getElementById('event');
+      var eventLabel = doc.querySelector('[data-event-label]');
+      if (eventInput) eventInput.value = EVENTS[eventSlug];
+      if (eventLabel) eventLabel.textContent = EVENTS[eventSlug];
+    }
+  } catch (err) { /* old browser: apply without an event */ }
+
   var ENDPOINT = 'https://script.google.com/macros/s/AKfycbx-sjrBxz770arO83bR4yQz1lSpZFsxovFHZt5Ks_1lBpIM5_iKh2QAs9nGNeWtC0oNgA/exec';
   var openedAt = Date.now();
 

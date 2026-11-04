@@ -70,7 +70,7 @@
   <div class="apply__main">
 
     <div class="apply__head">
-      <p class="label"><span>✦</span>Membership</p>
+      <p class="label"><span>✦</span><span data-event-label>Membership</span></p>
       <p class="meta">One minute</p>
     </div>
 
@@ -83,6 +83,9 @@
         <label for="website">Website</label>
         <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
       </div>
+
+      <!-- set from ?event= on the link, so the sheet shows which event brought them -->
+      <input type="hidden" name="event" id="event" value="">
 
       <fieldset class="fieldset">
         <div class="fieldset__head"><span>I</span><h2>You</h2></div>
@@ -175,6 +178,6 @@
   </div>
 </main>
 
-<script src="assets/js/main.js?v=5" defer></script>
+<script src="assets/js/main.js?v=6" defer></script>
 </body>
 </html>
