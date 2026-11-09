@@ -630,6 +630,8 @@ html.js .reveal.is-in { opacity: 1; transform: none; }
 @media (max-width: 899px) {
   .hero__now { justify-content: space-between; }
 }
+/* keeps the toggle on the right when no event sits beside it */
+.hero__now .vid-toggle { margin-left: auto; }
 
 .vid-toggle {
   display: inline-flex; align-items: center; gap: 0.7rem;

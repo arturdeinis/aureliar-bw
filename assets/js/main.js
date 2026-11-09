@@ -493,11 +493,10 @@
   -------------------------------------------------------------------- */
   /* events that can be linked as apply.html?event=<slug>. The label is what
      shows on the form and lands in the sheet's Event column; unknown slugs
-     are ignored, so the column only ever holds these values. */
-  var EVENTS = {
-    'chapter-vi': 'Chapter VI · The Mastermind Table, November 7th',
-    gongu: 'Chapter VI · The Mastermind Table, November 7th' /* old link, kept so it still tags */
-  };
+     are ignored, so the column only ever holds these values. Empty while no
+     event is open: old links (e.g. ?event=chapter-vi) fall back to a plain
+     membership application. */
+  var EVENTS = {};
   try {
     var eventSlug = new URLSearchParams(window.location.search).get('event');
     if (eventSlug && Object.prototype.hasOwnProperty.call(EVENTS, eventSlug)) {
